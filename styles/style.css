@@ -81,6 +81,7 @@ body {
   top: -3rem;
   padding: 0 1.5rem 0 1.5rem;
   line-height: 1.3rem;
+  width: 100%;
 }
 
 .card .accordian .heading {
@@ -89,7 +90,7 @@ body {
 
 .card .accordian_item {
   border-bottom: 1px solid #e7e7e9;
-  padding: 1.3rem 0 1.3rem 0;
+  padding: 1.3rem 0 0 0;
 }
 
 .card .accordian_panel, .card .accordian_btn {
@@ -98,6 +99,7 @@ body {
 }
 
 .card .accordian_btn {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,9 +109,14 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   border: none;
+  outline: none;
   background-color: #ffffff;
-  padding-bottom: 1.3rem;
+  padding-bottom: 1rem;
   width: 100%;
+}
+
+.card .accordian_btn:hover {
+  color: #f47c57;
 }
 
 .card .accordian_btn::after {
@@ -122,5 +129,28 @@ body {
   background-image: url(/images/icon-arrow-down.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.card .accordian_panel {
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.card .active {
+  font-weight: 700;
+}
+
+.card .active::after {
+  top: -0.43rem;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.card .hidden {
+  display: none;
+}
+
+.card .show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

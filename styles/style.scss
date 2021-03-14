@@ -73,6 +73,7 @@ body {
         top: -3rem;
         padding: 0 1.5rem 0 1.5rem;
         line-height: 1.3rem;
+        width: 100%;
 
         .heading {
             text-align: center;
@@ -82,7 +83,8 @@ body {
 
         &_item {
             border-bottom: 1px solid $ltgrey;
-            padding: 1.3rem 0 1.3rem 0;
+            padding: 1.3rem 0 0 0;
+            
         }
 
         &_panel, &_btn {
@@ -91,13 +93,19 @@ body {
         }
 
         &_btn {
+            cursor: pointer;
             display: flex;
             justify-content: space-between; 
             align-content: center;
             border: none;
+            outline: none;
             background-color: #ffffff;
-            padding-bottom: 1.3rem; 
-            width: 100%;    
+            padding-bottom: 1rem; 
+            width: 100%;   
+            
+            &:hover {
+                color: $red;
+            }
             
             &::after {
                 content: '';
@@ -111,7 +119,33 @@ body {
                 background-size: contain;
             }
         }
+
+        &_panel {
+            overflow: hidden;
+            padding-bottom: 1rem;
+            
+            // transition: max-height 0.2s ease-out;
+        }
     }
+
+    .active {
+        font-weight: 700;
+
+            &::after {
+                top: -0.43rem;
+                transform: scaleY(-1);
+        }
+    }
+
+    .hidden {
+       display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+   
 }
 
 
