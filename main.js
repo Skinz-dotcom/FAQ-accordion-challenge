@@ -13,6 +13,13 @@ for (i = 0; i < acc.length; i++) {
       }
     });
 
+    document.querySelectorAll(".accordian_btn").forEach((element) => {
+      if (element !== acc) {
+        element.classList.remove("active");
+        //   element.classList.add("hidden");
+      }
+    });
+
     this.classList.toggle("active");
     this.nextElementSibling.classList.toggle("hidden");
     this.nextElementSibling.classList.toggle("show");
