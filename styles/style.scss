@@ -118,17 +118,20 @@ body {
                 background-repeat: no-repeat;
                 background-size: contain;
             }
+
+            
         }
 
         &_panel {
+            display: none;
             overflow: hidden;
             padding-bottom: 1rem;
             
-            // transition: max-height 0.2s ease-out;
+            
         }
     }
 
-    .active {
+    .active>.accordian_btn {
         font-weight: 700;
 
             &::after {
@@ -137,9 +140,13 @@ body {
         }
     }
 
-    .hidden {
-       display: none;
+    .active>.accordian_panel {
+        display: block;
     }
+
+    // .hidden {
+    //    display: none;
+    // }
 
     .show {
         display: block;

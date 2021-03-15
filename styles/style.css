@@ -132,22 +132,23 @@ body {
 }
 
 .card .accordian_panel {
+  display: none;
   overflow: hidden;
   padding-bottom: 1rem;
 }
 
-.card .active {
+.card .active > .accordian_btn {
   font-weight: 700;
 }
 
-.card .active::after {
+.card .active > .accordian_btn::after {
   top: -0.43rem;
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
 }
 
-.card .hidden {
-  display: none;
+.card .active > .accordian_panel {
+  display: block;
 }
 
 .card .show {
