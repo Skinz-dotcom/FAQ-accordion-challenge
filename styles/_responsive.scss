@@ -4,13 +4,30 @@
         padding-top: 9.18rem;
     }
     .card {
+        height: 31rem;
         flex-wrap: nowrap;
-        background-image: url(/images/bg-pattern-desktop.svg);
-        background-repeat: no-repeat;
-        background-position: 2.5rem 0;
+
+        &_image-container{
+            background-image: url(/images/bg-pattern-desktop.svg);
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: 2.5rem 0;
+        }
+        img {
+            height: 22rem;
+        }
 
         .accordian {
-            top: 2rem;
+            top: 6rem;
+            height: fit-content;
+        }
+
+        &_image {
+            position: relative;
+            top: 0;
+            // height: 65%;
+            display: flex;
+            align-items: center;
         }
     }
     

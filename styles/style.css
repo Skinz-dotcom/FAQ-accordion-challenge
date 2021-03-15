@@ -51,7 +51,7 @@ body {
   left: -0.75rem;
 }
 
-.card_image_container .card_image {
+.card_image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,14 +140,34 @@ body {
     padding-top: 9.18rem;
   }
   .card {
+    height: 31rem;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .card_image-container {
     background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: 2.5rem 0;
   }
+  .card img {
+    height: 22rem;
+  }
   .card .accordian {
-    top: 2rem;
+    top: 6rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .card_image {
+    position: relative;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

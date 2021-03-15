@@ -35,12 +35,12 @@ body {
         background-size: inherit;
         position: relative;
         left: -0.75rem;
-    
-        .card_image {
-            display: flex;
-            position: relative;
-            top: -6.75rem;
-        }
+    }
+
+    &_image {
+        display: flex;
+        position: relative;
+        top: -6.75rem;
     }
 
     // accordian styling
