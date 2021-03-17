@@ -134,30 +134,52 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 900px) {
+#box {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
   body {
-    padding: 3rem;
+    padding: 10.5rem;
     padding-top: 9.18rem;
   }
   .card {
+    position: relative;
     height: 31rem;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .card_image-container {
+  .card_image_container, .card .accordian {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 50%;
+            flex: 1 50%;
+  }
+  .card_image_container {
     background-image: url(/images/bg-pattern-desktop.svg);
-    background-size: 50%;
+    background-size: 206%;
     background-repeat: no-repeat;
-    background-position: 2.5rem 0;
+    background-position: -24.5rem -3.75rem;
+    left: 0;
   }
   .card img {
-    height: 22rem;
-  }
-  .card .accordian {
-    top: 6rem;
+    width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    -webkit-transform: translateX(-73px);
+            transform: translateX(-73px);
+  }
+  .card .accordian {
+    top: 4.5rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-right: 4.8rem;
+  }
+  .card .accordian .heading {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 1.5rem;
   }
   .card_image {
     position: relative;
@@ -168,6 +190,83 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    overflow: hidden;
+  }
+  #box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateX(-50%) translateY(-30%);
+            transform: translateX(-50%) translateY(-30%);
+    width: 21%;
+    height: auto;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  body {
+    padding: 17.5rem;
+    padding-top: 9.18rem;
+  }
+  .card {
+    position: relative;
+    height: 31rem;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .card_image_container, .card .accordian {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 50%;
+            flex: 1 50%;
+  }
+  .card_image_container {
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-size: 206%;
+    background-repeat: no-repeat;
+    background-position: -33.5rem -16.75rem;
+    left: 0;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    -webkit-transform: translateX(-72px);
+            transform: translateX(-72px);
+  }
+  .card .accordian {
+    top: 4.5rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-right: 4.8rem;
+  }
+  .card .accordian .heading {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-bottom: 1.5rem;
+  }
+  .card_image {
+    position: relative;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  #box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateX(-50%) translateY(-30%);
+            transform: translateX(-50%) translateY(-30%);
+    width: 21%;
+    height: auto;
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

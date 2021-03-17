@@ -1,26 +1,44 @@
-@include media-lg {
+@include media-md {
     body {
-        padding: 3rem;
+        padding: 10.5rem;
         padding-top: 9.18rem;
     }
     .card {
+        position: relative;
         height: 31rem;
         flex-wrap: nowrap;
 
-        &_image-container{
-            background-image: url(/images/bg-pattern-desktop.svg);
-            background-size: 50%;
-            background-repeat: no-repeat;
-            background-position: 2.5rem 0;
+        &_image_container, .accordian {
+            flex: 1 50%;
         }
-        
+    
+
+        &_image_container{
+            background-image: url(/images/bg-pattern-desktop.svg);
+            background-size: 206%;
+            background-repeat: no-repeat;
+            background-position: -24.5rem -3.75rem;
+            left: 0;
+        }
+    
+    
         img {
-            height: 22rem;
+            width:  100%;
+            height: fit-content;
+            transform: translateX(-73px);
+            
         }
 
         .accordian {
-            top: 6rem;
+            top: 4.5rem;
             height: fit-content;
+            padding-right: 4.8rem;
+
+            .heading {
+                font-size: 1.5rem;
+                text-align: left;
+                padding-bottom: 1.5rem;
+            }
         }
 
         &_image {
@@ -29,7 +47,86 @@
             // height: 65%;
             display: flex;
             align-items: center;
+            overflow: hidden;
         }
+    }
+
+    #box {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateX(-50%) translateY(-30%);
+        width: 21%;
+        height: auto;
+        z-index: 1;
+    }
+}
+
+
+
+@include media-lg {
+    body {
+        padding: 17.5rem;
+        padding-top: 9.18rem;
+    }
+    .card {
+        position: relative;
+        height: 31rem;
+        flex-wrap: nowrap;
+       
+        
+
+        &_image_container, .accordian {
+            flex: 1 50%;
+        }
+
+        &_image_container{
+            background-image: url(/images/bg-pattern-desktop.svg);
+            background-size: 206%;
+            background-repeat: no-repeat;
+            background-position: -33.5rem -16.75rem;
+            left: 0;
+        }
+        
+        img {
+            width:  100%;
+            height: auto;
+            transform: translateX(-72px);
+            
+        }
+
+        .accordian {
+            top: 4.5rem;
+            height: fit-content;
+            padding-right: 4.8rem;
+
+            .heading {
+                font-size: 1.5rem;
+                text-align: left;
+                padding-bottom: 1.5rem;
+            }
+        }
+
+        &_image {
+            position: relative;
+            top: 0;
+            // height: 65%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+    }
+
+    #box {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateX(-50%) translateY(-30%);
+        width: 21%;
+        height: auto;
+        z-index: 1;
     }
     
 }
